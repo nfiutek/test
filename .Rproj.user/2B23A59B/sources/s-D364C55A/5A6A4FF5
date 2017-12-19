@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1513653989650.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "5A6A4FF5",
+    "lastKnownWriteTime" : 1513654087,
+    "last_content_update" : 1513655666968,
+    "path" : "~/Desktop/Bioinformatics/Repo/Cladogram.R",
+    "project_path" : "Cladogram.R",
+    "properties" : {
+        "cursorPosition" : "15,46",
+        "scrollLine" : "1",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
