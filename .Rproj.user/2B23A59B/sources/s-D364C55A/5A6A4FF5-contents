@@ -1,5 +1,6 @@
 #                            Creating Cladograms in R
 
+######################################################################
 #Install/Load Packages
 
 #ape is a program used in r that has functions for manipulating phylogenetic trees
@@ -13,36 +14,43 @@ library(phangorn)
 
 
 #seqinr is a program in r that helps read in DNA and protien data files 
-install.packages("seqinr",dependencies = TRUE))
+install.packages("seqinr",dependencies = TRUE)
 library(seqinr)
 
-
+#####################################################################
 #Import sequence data 
 
-smc<-read.dna("turbeville.dna",format = "interleaved")
-head(smcall)
+smcc<-read.dna("convertedsmc.phy",format = "interleaved")
+head(smcc)
+smcc
 
+smc_phyDat <- phyDat(smcc, type = "DNA", levels = NULL)
+
+######################################################################
 #Model Testing and Distance Matrice
 
 #using the phangorn program to create a distrance matrix of our data
-mt<-modelTest()
+mt<-modelTest(smc_phyDat)
 print(mt)
-dna_dist<-dist.ml(,model = "JC69")
+dna_dist<-dist.ml(smc_phyDat,model = "JC69")
 
+######################################################################
 #Neighbor joining, UPGMA, and Maximim Parsimony
-#UPGMA is
-_UPGMA<- upgma(dm)
-plot(_UPGMA, main="UPGMA")
 
-#Neighbor joining is
-_NJ<- NJ(dm)
-plot(_NJ, main="Neighbor Joining")
+#UPGMA stands for Unweighted Pair Group Method with Arithmetic Mean it is a agglomerative hierarchical clustering method. 
+#we use the phangorn package to run this test
+smc_UPGMA <- upgma(dna_dist)
+plot(smc_UPGMA, main="UPGMA")
 
-#Testing which tree is the best
+#Neighbor joining is a tree building method computing the lengths of the branches of this tree.
+#we use the phangorn package to run this test
+smc_NJ<- NJ(dna_dist)
+plot(smc_NJ, main="Neighbor Joining")
+
+#Testing which tree is the best 
 
 #parsimony function
-parsimony(_UPGMA)
-parsimony(_NJ)
-###
+parsimony(smc_UPGMA)
+parsimony(smc_NJ)
+###################################################################################################################
 
-#Maximum Likelyhood

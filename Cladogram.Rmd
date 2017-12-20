@@ -4,7 +4,6 @@ author: "Natalie Fiutek, Milo Aviles"
 date: "December 18, 2017"
 output: word_document
 ---
-Steps on how to create the cladogram
 1) Install/Load Packages
 ```{r}
 #install.packages("ape",dependencies = TRUE)
@@ -17,6 +16,11 @@ library(phangorn)
 
 #install.packages("seqinr",dependencies = TRUE))
 library(seqinr)
+
+```
+
+2) Import sequence data 
+```{r}
 
 ```
 

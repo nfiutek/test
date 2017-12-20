@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1513719711413.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "64D2B538",
+    "lastKnownWriteTime" : 2317442166205538096,
+    "last_content_update" : 1513719711413,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "id" : "60da5c7c1bd242bcb91c63600602f52c",
+        "name" : "smc10",
+        "title" : "smc10"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "object_explorer"
+}
